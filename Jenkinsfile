@@ -16,7 +16,7 @@ node {
 	stage('Test') {
 		sh 'npm test'
 	}
-	 stage('Building image') {
+	 stage('Build image') {
       
         script {
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
